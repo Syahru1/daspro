@@ -1,0 +1,259 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DoWhileCuti19",
+            "request": "launch",
+            "mainClass": "DoWhileCuti19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "WhileGaji19",
+            "request": "launch",
+            "mainClass": "WhileGaji19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Kelipatan19",
+            "request": "launch",
+            "mainClass": "Kelipatan19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "ForKelipatan19",
+            "request": "launch",
+            "mainClass": "ForKelipatan19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Ketti",
+            "request": "launch",
+            "mainClass": "Ketti",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Bank19",
+            "request": "launch",
+            "mainClass": "Bank19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "BillingWarnet",
+            "request": "launch",
+            "mainClass": "BillingWarnet",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "ContohOperator19",
+            "request": "launch",
+            "mainClass": "ContohOperator19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "ContohTipeData19",
+            "request": "launch",
+            "mainClass": "ContohTipeData19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "ContohVariabel19",
+            "request": "launch",
+            "mainClass": "ContohVariabel19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Exercise9",
+            "request": "launch",
+            "mainClass": "Exercise9",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Gaji19",
+            "request": "launch",
+            "mainClass": "Gaji19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "HargaBayar19",
+            "request": "launch",
+            "mainClass": "HargaBayar19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Lingkaran",
+            "request": "launch",
+            "mainClass": "Lingkaran",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Lingkaran19",
+            "request": "launch",
+            "mainClass": "Lingkaran19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Mandiri1",
+            "request": "launch",
+            "mainClass": "Mandiri1",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Mandiri2",
+            "request": "launch",
+            "mainClass": "Mandiri2",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Mandiri3$DeretBilangan",
+            "request": "launch",
+            "mainClass": "Mandiri3$DeretBilangan",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "MyFirstJava19",
+            "request": "launch",
+            "mainClass": "MyFirstJava19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Pemilihan2Percobaan119",
+            "request": "launch",
+            "mainClass": "Pemilihan2Percobaan119",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Pemilihan2Percobaan219",
+            "request": "launch",
+            "mainClass": "Pemilihan2Percobaan219",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Pemilihan2Percobaan319",
+            "request": "launch",
+            "mainClass": "Pemilihan2Percobaan319",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "PemilihanPercobaan119",
+            "request": "launch",
+            "mainClass": "PemilihanPercobaan119",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "PemilihanPercobaan219",
+            "request": "launch",
+            "mainClass": "PemilihanPercobaan219",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "PemilihanPercobaan319",
+            "request": "launch",
+            "mainClass": "PemilihanPercobaan319",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Problem1",
+            "request": "launch",
+            "mainClass": "Problem1",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Problem2",
+            "request": "launch",
+            "mainClass": "Problem2",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Problem28",
+            "request": "launch",
+            "mainClass": "Problem28",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Problem3",
+            "request": "launch",
+            "mainClass": "Problem3",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Problem4",
+            "request": "launch",
+            "mainClass": "Problem4",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Problem5",
+            "request": "launch",
+            "mainClass": "Problem5",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "ReservasiRestoran",
+            "request": "launch",
+            "mainClass": "ReservasiRestoran",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "ReservasiWarung",
+            "request": "launch",
+            "mainClass": "ReservasiWarung",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Segitiga19",
+            "request": "launch",
+            "mainClass": "Segitiga19",
+            "projectName": "DASPRO_5714cc0c"
+        },
+        {
+            "type": "java",
+            "name": "Selection",
+            "request": "launch",
+            "mainClass": "Selection",
+            "projectName": "DASPRO_5714cc0c"
+        }
+    ]
+}
