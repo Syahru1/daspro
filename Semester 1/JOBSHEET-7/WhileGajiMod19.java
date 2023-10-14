@@ -6,12 +6,9 @@ public class WhileGajiMod19{
         double gajilembur = 0;
         double totalgajilembur =0;
         String jabatan;
-
         System.out.println("masukkan jumlah karyawan");
         jumlahKaryawan = input19.nextInt();
-
         int i = 0;
-
         while(i < jumlahKaryawan){
             System.out.println("pilihan jabatan  - direktur, manajer, karyawan");
              jabatan = input19.nextLine();
@@ -20,7 +17,6 @@ public class WhileGajiMod19{
             System.out.println("masukkan jumlah jam lembur: ");
             jumlahjamlembur = input19.nextInt();
             i++;
-
             if (jabatan.equalsIgnoreCase("direktur")){
                 continue; 
             }else if (jabatan.equalsIgnoreCase("manajer")){
