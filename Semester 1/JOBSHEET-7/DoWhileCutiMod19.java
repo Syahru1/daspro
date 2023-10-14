@@ -1,41 +1,33 @@
 import java.util.Scanner;
 public class DoWhileCutiMod19{
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
-
-        int JatahCuti, JumlahHari;
+        int jatahCuti, jumlahHari;
         String konfirmasi;
-        
-        
+
         System.out.print("jatah cuti :");
-        JatahCuti = sc.nextInt();
+        jatahCuti = sc.nextInt();
 
         do{
-            System.out.println("apakah anda mengambil cuti (y/t)");
+            System.out.println("Apakah Anda ingin mengambil cuti (y/t)? ");
             konfirmasi = sc.next();
 
            if (konfirmasi.equalsIgnoreCase("y")){
-                System.out.print("jumlah hari :");
-                JumlahHari = sc.nextInt();
+                System.out.print("Jumlah hari :");
+                jumlahHari = sc.nextInt();
                 
-                
-
-                if (JumlahHari <= JatahCuti){
-                    JatahCuti -= JumlahHari;
-                    System.out.print("sisa jatah cuti :"  + JatahCuti);
-
+                if (jumlahHari <= jatahCuti){
+                    jatahCuti -= jumlahHari;
+                    System.out.print("Sisa jatah cuti :"  + jatahCuti);
                 }else{
-                    System.out.println("sisa jatah cuti anda tidak mencukupi");
+                    System.out.println("Sisa jatah cuti Anda tidak mencukupi");
                     break;
                 }
-  
-
             }
            else if (konfirmasi.equalsIgnoreCase("t")){
                     break;
                 }
-          
-        }while (JatahCuti > 0);
+
+        }while (jatahCuti > 0);
     }
 }

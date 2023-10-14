@@ -19,10 +19,11 @@ public class DoWhileCuti19 {
 
                 if (jumlahHari <= jatahCuti) {
                     jatahCuti -= jumlahHari;
-                    System.out.println("Sisa jatah curi: " + jatahCuti);
+                    System.out.println("Sisa jatah cuti: " + jatahCuti);
                 }else {
-                    System.out.println("Sisa jatah cuti Anda tidak mencukupi");
-                    break;
+                    System.out.println("Jumlah hari cuti yang diminta melebihi jatah cuti yang tersisa. Silakan coba lagi.");
+                    //System.out.println("Sisa jatah cuti Anda tidak mencukupi");
+                    //break;
                 }
             }
         } while (jatahCuti > 0);
