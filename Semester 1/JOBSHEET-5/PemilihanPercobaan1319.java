@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PemilihanPercobaan319 {
+public class PemilihanPercobaan1319 {
     public static void main(String[] args) {
         Scanner input19 = new Scanner(System.in);
         double angka1, angka2, hasil;
@@ -17,7 +17,7 @@ public class PemilihanPercobaan319 {
             case '+' :
                 hasil = angka1 + angka2;
                 System.out.println(angka1 + " + " + angka2 + "=" + hasil);
-                break;
+                //break;
             case '-' :
                 hasil = angka1 - angka2;
                 System.out.println(angka1 + " - " + angka2 + "=" + hasil);

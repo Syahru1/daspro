@@ -3,27 +3,20 @@ import java.util.Scanner;
 public class HargaBayar19 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int harga,jumlah,jumhalbuku;
-        double dis, total, bayar, JmlDis;
-        String merkbuku;
+        int harga, jumlah;
+        double dis=0.1, total, bayar, JmlDis;
 
-        System.out.println("Masukkan merk buku");
-        merkbuku = input.nextLine();
-        System.out.println("Masukkan jumlah halaman buku");
-        jumhalbuku = input.nextInt();
-        System.out.println("Masukkan harga barang");
+        System.out.println("Masukkan harga barang yang dibeli ");
         harga = input.nextInt();
-        System.out.println("Masukkan jumlah barang");
+        System.out.println("Masukkan Jumlah jumlah barang yang dibeli");
         jumlah = input.nextInt();
-        System.out.println("Masukkan persentase diskon barang");
-        dis = input.nextDouble();
 
         total = harga*jumlah;
-        JmlDis = total*(dis/100);
-        bayar = total-JmlDis;
+        JmlDis=total*dis;
+        bayar=total-JmlDis;
 
-        System.out.println("Diskon yang anda dapatkan adalah : Rp" + JmlDis);
-        System.out.println("Jumlah yang harus dibayar untuk merk buku \""+ 
-        merkbuku +"\" yang berjumlah "+ jumhalbuku+" halaman adalah : Rp" +bayar);
-    } 
+        System.out.println("Diskon yang anda dapatkan adalah " + JmlDis);
+        System.out.println("Jumlah yang harus dibayar adalah " + bayar);
+    }
+    
 }

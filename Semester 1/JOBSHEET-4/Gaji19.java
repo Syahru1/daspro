@@ -3,18 +3,15 @@ import java.util.Scanner;
 public class Gaji19 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int JmlMasuk,JmlTdkMasuk, gaji, potGaji, TotGaji;
+        int jmlMasuk, JmlTdkMasuk, TotGaji;
+        int gaji= 40000, potGaji = 25000;
 
-        System.out.println("Masukkan jumlah masuk");
-        JmlMasuk = input.nextInt();
-        System.out.println("Masukkan jumlah tidak masuk");
+        System.out.println("Masukkan Jumlah Hari Masuk Kerja Anda ");
+        jmlMasuk = input.nextInt();
+        System.out.println("Masukkan Jumlah Hari Tidak Masuk Kerja Anda ");
         JmlTdkMasuk = input.nextInt();
-        System.out.println("Masukkan jumlah gaji : ");
-        gaji = input.nextInt();
-        System.out.println("Masukkan jumlah potongan gaji : ");
-        potGaji = input.nextInt();
 
-        TotGaji = (JmlMasuk*gaji)-(JmlTdkMasuk*potGaji);
-        System.out.println("Gaji yang anda terima adalah : Rp"+ TotGaji);
+        TotGaji = (jmlMasuk*gaji)-(JmlTdkMasuk*potGaji);
+        System.out.println("Gaji yang anda terima adalah "+ TotGaji);
     }
 }

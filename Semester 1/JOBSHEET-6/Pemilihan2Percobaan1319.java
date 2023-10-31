@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Pemilihan2Percobaan319 {
+public class Pemilihan2Percobaan1319 {
     public static void main(String[] args) {
         Scanner sc19 = new Scanner(System.in);
 
@@ -12,7 +12,7 @@ public class Pemilihan2Percobaan319 {
         System.out.print("Masukkan Besarnya Penghasilan : ");
         penghasilan = sc19.nextInt();
 
-        if (kategori.equalsIgnoreCase("pekerja ")) {
+        if (kategori.equals("pekerja ")) {
             if (penghasilan <= 2000000)
                 pajak = 0.1;
             else if (penghasilan <= 3000000)
@@ -21,7 +21,7 @@ public class Pemilihan2Percobaan319 {
                 pajak = 0.2;
             gajiBersih = (int) (penghasilan - (pajak * penghasilan));
             System.out.print("Penghasilan Bersih : " + gajiBersih);
-        }else if (kategori.equalsIgnoreCase("Pebisnis")) {
+        }else if (kategori.equals("Pebisnis")) {
             if (penghasilan <= 2500000)
                 pajak = 0.15;
             else if (penghasilan <= 3500000)

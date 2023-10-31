@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pemilihan2Percobaan219 {
+public class Pemilihan2Percobaan1219 {
     public static void main(String[] args) {
         Scanner input19 = new Scanner(System.in);
 
@@ -15,9 +15,13 @@ public class Pemilihan2Percobaan219 {
 
         if (totalSudut == 180) {
             if ((sudut1 == 90) || (sudut2 == 90) || (sudut3 == 90)) {
-                System.out.println("Segitiga tersebut adalah segitiga siku-siku");
+                System.out.println("Segitiga Tersebut Adalah Segitiga Siku-Siku");
+            }else if (sudut1 == sudut2 && sudut2 == sudut3) {
+                System.out.println("Segitiga Tersebut Adalah Segitiga Sama Sisi");
+            }else if (sudut1 == sudut2 || sudut2 == sudut3 || sudut1 == sudut3) { 
+                System.out.println("Segitiga Tersebut Adalah Segitiga Sama Kaki");
             }else {
-                System.out.println("Segitiga tersebut adalah nukan segitiga siku-siku");
+                System.out.println("Segitiga Tersebut Adalah Segitiga Sembarang");
             }   
         }else {
             System.out.println("Bukan Segitiga");

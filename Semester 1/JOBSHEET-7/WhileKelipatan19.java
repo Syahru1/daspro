@@ -8,15 +8,14 @@ public class WhileKelipatan19  {
         System.out.print("Masukkan bilangan kelipatan (1-9): ");
         kelipatan = sc.nextInt();
 
-        int i = 1; // Inisialisasi penghitung
+        int i = 1; 
         while (i <= 50) {
             if (i % kelipatan == 0) {
                 jumlah += i;
                 counter++;
             }
-            i++; // Perbaruan penghitung
+            i++; 
         }
-
         System.out.printf("Banyaknya bilangan %d dari 1 sampai 50 adalah %d\n", kelipatan, counter);
         System.out.printf("Total bilangan kelipatan %d dari 1 sampai 50 adalah %d\n", kelipatan, jumlah);
     }
