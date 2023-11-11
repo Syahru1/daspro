@@ -3,19 +3,16 @@ import java.util.Scanner;
 public class ReservasiRestoran {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String nama;
-        int jamdanharga,menu,angkaHari, tamu, ruangan, masukkanHari;
-        boolean inputNamaValid, inputHariValid, inputJamValid, inputRuanganValid, inputMenuValid;
 
         System.out.println("********************************************************************");
         System.out.println("||                                                                ||");
-        System.out.println("||              Selamat Datang di Restoran Cukurukuk              ||");
+        System.out.println("||              Selamat Datang di Restoran Syahrul                ||");
         System.out.println("||                                                                ||");
         System.out.println("********************************************************************");
         System.out.println("Masukkan Nama Pemesan Tempat:");
-        nama = input.nextLine();
+        String nama = input.nextLine();
 
-        inputNamaValid = false;
+        boolean inputNamaValid = false;
         while (!inputNamaValid) {
             if (digitCheck(nama)) {
                 System.out.println("Error: Harap masukkan nama tanpa melibatkan angka!");
@@ -27,7 +24,7 @@ public class ReservasiRestoran {
         }
 
         System.out.println("Masukkan Jumlah Tamu Yang Hadir:");
-        tamu = input.nextInt();
+        int tamu = input.nextInt();
 
         System.out.println("Daftar Hari Untuk Reservasi Tempat :");
         System.out.println("1. Senin");
@@ -38,9 +35,9 @@ public class ReservasiRestoran {
         System.out.println("6. Sabtu");
         System.out.println("7. Minggu"); 
         System.out.println("Masukkan Hari Pemesanan Anda (Dalam Bentuk Angka): ");
-        masukkanHari = input.nextInt();
+        int masukkanHari = input.nextInt();
 
-        inputHariValid = false;
+        boolean inputHariValid = false;
         while (!inputHariValid) {
             if (masukkanHari < 1 || masukkanHari >7) {
                 System.out.println("Error: Harap Anda memasukkan angka dari 1 sampai 7!");
@@ -60,9 +57,9 @@ public class ReservasiRestoran {
         System.out.println("5. 13.00 - 22.00 : Rp4.000.000,00/50 orang");
         System.out.println("6. 08.00 - 22.00 : Rp5.000.000,00/50 orang");
         System.out.println("Masukkan Jam Pemesanan Anda (Dalam bentuk angka):");
-        jamdanharga = input.nextInt();
+        int jamdanharga = input.nextInt();
 
-        inputJamValid = false;
+        boolean inputJamValid = false;
         while (!inputJamValid) {
             if (jamdanharga < 1 || jamdanharga >7) {
                 System.out.println("Error: Harap Anda memasukkan angka dari 1 sampai 7!");
@@ -80,7 +77,7 @@ public class ReservasiRestoran {
         System.out.println("3. Indoor lt 2 : max 100 orang");
         System.out.println("4. Outdoor lt 2 : max 100 orang");
         System.out.println("Masukkan Ruangan Pemesanan Anda (Dalam Bentuk Angka) :");
-        ruangan = input.nextInt();
+        int ruangan = input.nextInt();
 
             if ( ruangan < 1 || ruangan > 4) {
                 System.out.println("Error: Harap Anda memasukkan angka dari 1 sampai 4!");
@@ -97,9 +94,9 @@ public class ReservasiRestoran {
         System.out.println("2. Paket B : Lalapan, Soto, Nasi Goreng, Es Buah");
         System.out.println("3. Paket C : Rawon, Lalapan, Pecel, Jus Buah");
         System.out.println("Masukkan Pilihan Paket Menu Pemesanan Anda (Dalam Bentuk Angka) :");
-        menu = input.nextInt();
+        int menu = input.nextInt();
 
-        inputMenuValid = false;
+        boolean inputMenuValid = false;
         while (!inputMenuValid) {
             if (menu < 1 || menu > 3) {
                 System.out.println("Error: Harap Anda memasukkan angka dari 1 sampai 3!");
@@ -129,27 +126,5 @@ public class ReservasiRestoran {
             }
         }
         return false;
-    }
-
-
-    public static String namaHari(int angkaHari) {
-        switch (angkaHari) {
-            case 1:
-                return "Senin";
-            case 2:
-                return "Selasa";
-            case 3:
-                return "Rabu";
-            case 4:
-                return "Kamis";
-            case 5:
-                return "Jumat";
-            case 6:
-                return "Sabtu";
-            case 7:
-                return "Minggu";
-            default:
-                return "Tidak valid";
-        }
     }
 }

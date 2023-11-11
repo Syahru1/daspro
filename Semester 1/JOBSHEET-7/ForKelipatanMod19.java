@@ -11,7 +11,6 @@ public class ForKelipatanMod19{
             if (i % kelipatan == 0){
                 jumlah += i;
                 counter++;
-                
             } 
         }
         rata_rata = (double) jumlah/counter;

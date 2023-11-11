@@ -12,7 +12,7 @@ public class Mandiri1 {
             System.out.print("Masukkan jenis kelamin (L/P) mahasiswa ke-" + i + ": ");
             char jenisKelamin = input.next().charAt(0);
 
-            input.nextLine(); // Membersihkan newline
+            input.nextLine(); 
 
             if (jenisKelamin == 'P' || jenisKelamin == 'p') {
                 System.out.println("Nama Mahasiswa: " + nama);

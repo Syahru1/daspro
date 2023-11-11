@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PersegiAngka",
+            "request": "launch",
+            "mainClass": "PersegiAngka",
+            "projectName": "Semester 1_dd8c94c"
+        },
+        {
+            "type": "java",
+            "name": "Star",
+            "request": "launch",
+            "mainClass": "Star",
+            "projectName": "Semester 1_dd8c94c"
+        },
+        {
+            "type": "java",
+            "name": "Bioskop19",
+            "request": "launch",
+            "mainClass": "Bioskop19",
+            "projectName": "Semester 1_dd8c94c"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
