@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class BioskopWithScanner219 {
+public class BioskopWithScanner419 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         int baris, kolom;
         String nama, next;
 
@@ -26,13 +26,25 @@ public class BioskopWithScanner219 {
                 System.out.print("Masukkan kolom: ");
                 kolom = sc.nextInt();
                 sc.nextLine();
-            
+
                 if (baris >= 1 && baris <= penonton.length && kolom >= 1 && kolom <= penonton[0].length) {
-                    if (penonton[baris-1][kolom-1] == null) {
-                        penonton[baris-1][kolom-1] = nama;
+                    if (penonton[baris - 1][kolom - 1] == null) {
+                        penonton[baris - 1][kolom - 1] = nama;
                         System.out.println("Data penonton berhasil dimasukkan.");
                     } else {
-                        System.out.println("Kursi sudah terisi. Pilih kursi lain.");
+                        System.out.println("Maaf, kursi sudah terisi. Silakan pilih kursi lain.");
+                        System.out.print("Masukkan baris: ");
+                        baris = sc.nextInt();
+                        System.out.print("Masukkan kolom: ");
+                        kolom = sc.nextInt();
+                        sc.nextLine();
+
+                        if (penonton[baris - 1][kolom - 1] == null) {
+                            penonton[baris - 1][kolom - 1] = nama;
+                            System.out.println("Data penonton berhasil dimasukkan.");
+                        } else {
+                            System.out.println("Maaf, kursi sudah terisi. Pembatalan input.");
+                        }
                     }
                 } else {
                     System.out.println("Nomor baris atau kolom tidak valid. Silakan coba lagi.");
@@ -44,6 +56,8 @@ public class BioskopWithScanner219 {
                         String penontonNama = penonton[i][j];
                         if (penontonNama != null) {
                             System.out.println("Baris " + (i + 1) + ", Kolom " + (j + 1) + ": " + penontonNama);
+                        } else {
+                            System.out.println("Baris " + (i + 1) + ", Kolom " + (j + 1) + ": *** (Kursi kosong)");
                         }
                     }
                 }
@@ -53,7 +67,7 @@ public class BioskopWithScanner219 {
             } else {
                 System.out.println("Menu tidak valid. Silahkan pilih 1, 2, atau 3.");
             }
-            
+
             System.out.print("Input penonton lainnya? (y/n): ");
             next = sc.nextLine();
 
@@ -63,3 +77,4 @@ public class BioskopWithScanner219 {
         }
     }
 }
+                
