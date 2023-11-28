@@ -19,8 +19,8 @@ public class PersegiAngka {
                 } else {
                     System.out.print("  "); 
                 }
-                System.out.println();
             }
+            System.out.println();
         }
     }
 }

@@ -16,5 +16,5 @@ public class Individu4 {
             rata2 = sum/arr.length;
         System.out.println("Rata-rata: " + rata2);
         sc.close();
-        }
     }
+}

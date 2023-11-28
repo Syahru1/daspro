@@ -9,7 +9,7 @@ public class ReservasiRestoran {
         System.out.println("||              Selamat Datang di Restoran Syahrul                ||");
         System.out.println("||                                                                ||");
         System.out.println("********************************************************************");
-        System.out.println("Masukkan Nama Pemesan Tempat:");
+        System.out.print("Masukkan Nama Pemesan Tempat:");
         String nama = input.nextLine();
 
         boolean inputNamaValid = false;
@@ -23,9 +23,6 @@ public class ReservasiRestoran {
             }
         }
 
-        System.out.println("Masukkan Jumlah Tamu Yang Hadir:");
-        int tamu = input.nextInt();
-
         System.out.println("Daftar Hari Untuk Reservasi Tempat :");
         System.out.println("1. Senin");
         System.out.println("2. Selasa");
@@ -34,8 +31,11 @@ public class ReservasiRestoran {
         System.out.println("5. Jumat");
         System.out.println("6. Sabtu");
         System.out.println("7. Minggu"); 
-        System.out.println("Masukkan Hari Pemesanan Anda (Dalam Bentuk Angka): ");
+        System.out.println("Masukkan Hari Pemesanan Anda: ");
         int masukkanHari = input.nextInt();
+
+        System.out.print("Masukkan Jumlah Tamu Yang Hadir:");
+        int tamu = input.nextInt();
 
         boolean inputHariValid = false;
         while (!inputHariValid) {
@@ -128,3 +128,4 @@ public class ReservasiRestoran {
         return false;
     }
 }
+
