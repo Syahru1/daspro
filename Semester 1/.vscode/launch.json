@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ContohPercobaan519",
+            "request": "launch",
+            "mainClass": "ContohPercobaan519",
+            "projectName": "Semester 1_dd8c94c"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
