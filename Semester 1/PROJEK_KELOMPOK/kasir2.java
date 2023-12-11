@@ -5,34 +5,34 @@ public class kasir2 {
         int baris, kolom;
         String nama, next;
 
-        String[][] pelanggan = new String[4][2];
-
         while (true) {
             System.out.println("|====================================|");
             System.out.println("|                                    |");
-            System.out.println("|          RESTAURANT SYAHRUL        |");
+            System.out.println("|          RESTAURANT DEBIAN         |");
             System.out.println("|                                    |");
             System.out.println("|====================================|");
-            System.out.println("|                 MENU               |");
+            System.out.println("|                MENU                |");
             System.out.println("|1. Input pesanan pelanggan          |");
-            System.out.println("|2. Tampilkan daftar pelanggan       |");
-            System.out.println("|3. Exit                             |");
+            System.out.println("|2. Input meja pelanggan             |");
+            System.out.println("|3. Tampilkan daftar pelanggan       |");
+            System.out.println("|4. Exit                             |");
             System.out.println("|====================================|");
-            System.out.print("Pilih menu (1/2/3) : ");
+            System.out.print("Pilih menu (1/2/3/4) : ");
             int menu = input.nextInt();
             input.nextLine();
 
             if (menu == 1) {
                 System.out.print("Masukkan nama pelanggan : ");
                 nama = input.nextLine();
-
                 System.out.println("|====================================|");
-                System.out.println("|1. Makanan                          |");
-                System.out.println("|2. Minuman                          |");
-                System.out.println("|3. Total harga                      |");
-                System.out.println("|4. Exit                             |");
+                System.out.println("|                                    |");
+                System.out.println("|                MENU 1              |");
+                System.out.println("|                                    |");
                 System.out.println("|====================================|");
-                System.out.print("Pilih menu (1/2/3/4) : ");
+                System.out.println("|1. Makanan & Minuman                |");
+                System.out.println("|2. Exit                             |");
+                System.out.println("|====================================|");
+                System.out.print("Pilih menu (1/2) : ");
                 int produk = input.nextInt();
                 input.nextLine();
 
@@ -53,6 +53,7 @@ public class kasir2 {
                     System.out.println("|   8. Ikan Bakar       Rp 25.000    |");
                     System.out.println("|   9. Tumis Kangkung   Rp 7.000     |");
                     System.out.println("|   10. Cumi Asam Manis Rp 20.000    |");
+                    System.out.println("| Masukkan angka 0 jika tidak memesan|");
                     System.out.println("|                                    |");
                     System.out.println("|====================================|");
 
@@ -120,7 +121,7 @@ public class kasir2 {
                             System.out.println("Maaf pilihan tidak tersedia");
                             break;
                     }
-                }else if (produk == 2) {
+
                     System.out.println("|====================================|");
                     System.out.println("|                                    |");
                     System.out.println("|            PILIH MINUMAN           |");
@@ -137,6 +138,7 @@ public class kasir2 {
                     System.out.println("|   8. Soda Gembira     Rp 10.000    |");
                     System.out.println("|   9. Es Cincau        Rp 5.000     |");
                     System.out.println("|   10. Aneka Jus       Rp 7.000     |");
+                    System.out.println("| Masukkan angka 0 jika tidak memesan|");
                     System.out.println("|                                    |");
                     System.out.println("|====================================|");
 
@@ -204,11 +206,10 @@ public class kasir2 {
                             System.out.println("Maaf pilihan tidak tersedia");
                             break;
                     }
-                }else if (produk == 3) {
-
+                    int total = total_makan + total_minum;
                     System.out.println("|====================================|");
                     System.out.println("|                                    |");
-                    System.out.println("|      KASIR RESTAURANT SYAHRUL      |");
+                    System.out.println("|      KASIR RESTAURANT DEBIAN       |");
                     System.out.println("|                                    |");
                     System.out.println("|====================================|");
                     System.out.println("|                                    |");
@@ -218,12 +219,95 @@ public class kasir2 {
                     System.out.println("                                     ");
                     System.out.println("   Makanan      : " + nama_makanan);   
                     System.out.println("   Jumlah Porsi : " + jum_porsi);
-                    System.out.println("   Minuman      : " + nama_minum);
+                    System.out.println("   Minuman      : " + nama_minum);   
                     System.out.println("   Jumlah Porsi : " + jum_gelas);
                     System.out.println("|====================================|");
                     System.out.println("   Total harga  : RP" + total);
-                    System.out.println("|====================================|");  
+                    System.out.println("|====================================|");
+
+                    continue;
+                    
+                }else if (produk == 2) {
+                    System.out.println("Anda keluar dari menu input pesanan");
+
+                    continue;
                 }
+
+            }if (menu == 2) {
+                Scanner sc = new Scanner(System.in);
+                String[][] tempat = new String[3][50];
+        
+                while (true) {
+                    System.out.println("|=================S                 |");
+                    System.out.println("|                MENU 2              |");
+                    System.out.println("|                                    |");
+                    System.out.println("|====================================|");
+                    System.out.println("|     1. Lantai dan Meja             |");
+                    System.out.println("|     2. Tampilkan daftar meja       |");
+                    System.out.println("|     3. Exit                        |");
+                    System.out.println("|====================================|");
+                    System.out.print("Pilih menu (1/2/3): ");
+                    int m = sc.nextInt();
+                    sc.nextLine();
+        
+                    if (m == 1) {
+                        System.out.print("Masukkan nama : ");
+                        nama = sc.nextLine();
+                        System.out.print("Lantai        : ");
+                        baris = sc.nextInt();
+                        System.out.print("Meja          : ");
+                        kolom = sc.nextInt();
+                        sc.nextLine();
+        
+                        if (baris >= 1 && baris <= tempat.length && kolom >= 1 && kolom <= tempat[0].length) {
+                            if (tempat[baris - 1][kolom - 1] == null) {
+                                tempat[baris - 1][kolom - 1] = nama;
+                                System.out.println("Data pelanggan berhasil dimasukkan.");
+                            } else {
+                                System.out.println("Maaf, meja sudah terisi. Silakan pilih meja lain.");
+                                System.out.print("Lantai : ");
+                                baris = sc.nextInt();
+                                System.out.print("Meja   : ");
+                                kolom = sc.nextInt();
+                                sc.nextLine();
+        
+                                if (tempat[baris - 1][kolom - 1] == null) {
+                                    tempat[baris - 1][kolom - 1] = nama;
+                                    System.out.println("Data pelanggan berhasil dimasukkan.");
+                                } else {
+                                    System.out.println("Maaf, meja sudah terisi. Pembatalan input.");
+                                }
+                            }
+                        } else {
+                            System.out.println("Nomor lantai atau meja tidak valid. Silakan coba lagi.");
+                        }
+                    } else if (m == 2) {
+                        System.out.println("Daftar pelanggan");
+                        for (int i = 0; i < tempat.length; i++) {
+                            for (int j = 0; j < tempat[i].length; j++) {
+                                String penontonNama = tempat[i][j];
+                                if (penontonNama != null) {
+                                    System.out.println("Lantai " + (i + 1) + ", Meja " + (j + 1) + ": " + penontonNama);
+                                } else {
+                                    System.out.println("Lantai " + (i + 1) + ", Meja " + (j + 1) + ": *** (Meja kosong)");
+                                }
+                            }
+                        }
+                        continue;
+
+                    } else if(m == 3) {
+                        System.out.println("Terima kasih! Keluar dari menu 2.");
+                    }
+                }
+                
+            }if (menu == 3) {
+
+            }if (menu == 4) {
+                System.out.print("Selamat Anda keluar dari program. Terimakasih sudah menggunakan aplikasi hari ini dengan baik.");
+                break;
+            }else {
+                System.out.print("Menu tidak valid silahkan pilih kembali.");
+                break;
             }
         }
     }
