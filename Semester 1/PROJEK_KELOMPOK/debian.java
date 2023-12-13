@@ -22,7 +22,6 @@ public class debian {
 
     static void admin() {
         String username, password;
-        boolean exitProgram = false;
 
         System.out.print("Masukkan username : ");
         username = input.nextLine();
@@ -36,6 +35,7 @@ public class debian {
             return;
         }
 
+        boolean exitProgram = false;
         while (!exitProgram) {
             boolean keluarMenuAdmin = false;
 
@@ -782,8 +782,9 @@ public class debian {
             if (tempat[baris - 1][kolom - 1] == null) {
                 tempat[baris - 1][kolom - 1] = nama;
                 System.out.println("Data pelanggan berhasil dimasukkan.");
-                System.out.println("||Nama : " + nama + "||" + "||\nLantai : " + "||" + baris + "||\nNomor Meja : "
-                        + "||" + kolom);
+                System.out.println("====================================================");
+                System.out.println("||Nama : " + nama + "||Lantai : " + baris + "||Nomor Meja : "+ kolom);
+                System.out.println("====================================================");
             } else {
                 System.out.println("Maaf, meja sudah terisi. Silakan pilih meja lain.");
                 System.out.print("Lantai : ");
@@ -810,9 +811,13 @@ public class debian {
             for (int j = 0; j < tempat[i].length; j++) {
                 String penontonNama = tempat[i][j];
                 if (penontonNama != null) {
-                    System.out.println("\nLantai " + (i + 1) + ", \nMeja " + (j + 1) + ": " + penontonNama);
+                    System.out.println("===================================================");
+                    System.out.println("Lantai " + (i + 1) + "||Meja " + (j + 1) + ": " + penontonNama + " (Meja terisi)");
+                    System.out.println("===================================================");
                 } else {
-                    System.out.println("\nLantai " + (i + 1) + ", \nMeja " + (j + 1) + ": *** (Meja kosong)");
+                    System.out.println("===================================================");
+                    System.out.println("Lantai " + (i + 1) + "||Meja " + (j + 1) + ": *** (Meja kosong)");
+                    System.out.println("===================================================");
                 }
             }
         }
@@ -849,10 +854,6 @@ public class debian {
         System.out.println("7. Minggu");
         System.out.println("Masukkan Hari Pemesanan Anda (dalam bentuk angka): ");
         int masukkanHari = input.nextInt();
-
-        System.out.print("Masukkan Jumlah Tamu Yang Hadir:");
-        int tamu = input.nextInt();
-
         boolean inputHariValid = false;
         while (!inputHariValid) {
             if (masukkanHari < 1 || masukkanHari > 7) {
@@ -864,6 +865,8 @@ public class debian {
                 inputHariValid = true;
             }
         }
+        System.out.print("Masukkan Jumlah Tamu Yang Hadir:");
+        int tamu = input.nextInt();
 
         System.out.println("Daftar Jam Untuk Reservasi Tempat :");
         System.out.println("1. 08.00 - 12.00 ");
@@ -945,7 +948,7 @@ public class debian {
         System.out.println("Jumlah Tamu \t\t\t: " + tamu);
         System.out.println("Hari \t\t\t\t: " + masukkanHari);
         System.out.println("Jam dan Harga \t\t\t: " + jamdanharga);
-        System.out.println("Ruangan(Lantai) \t: " + ruangan);
+        System.out.println("Ruangan(Lantai) \t\t\t: " + ruangan);
         System.out.println("Menu \t\t\t\t: " + menu);
 
     }
@@ -964,9 +967,8 @@ public class debian {
         System.out.println("||          METODE PEMBAYARAN          ||");
         System.out.println("||=====================================||");
         System.out.println("||       1. Tunai                      ||");
-        System.out.println("||       2. Kartu Kredit               ||");
         System.out.println("||=====================================||");
-        System.out.println("Pilih metode pembayaran (1/2) : ");
+        System.out.println("Pilih metode pembayaran (1) : ");
         int metode = input.nextInt();
         input.nextLine();
 
@@ -974,21 +976,20 @@ public class debian {
             case 1:
                 pembayaranTunai();
                 break;
-            case 2:
-                pembayaranKartuKredit();
-                break;
             default:
-                System.out.println("Metode pembayaran tidak valid. Harap pilih kembali (1/2) : ");
+                System.out.println("Metode pembayaran tidak valid. Harap pilih kembali (1) : ");
                 break;
         }
     }
 
     static void pembayaranTunai() {
-        System.out.println("Masukkan jumlah pembayaran tunai : ");
+        System.out.print("Masukkan jumlah yang harus dibayar : Rp");
         double jumlahPembayaranTunai = input.nextDouble();
+        System.out.print("Masukkan nominal uang untuk membayar : Rp");
+        double totalPembayaran = input.nextDouble();
 
-        if (jumlahPembayaranTunai >= totalPembayaran) {
-            double kembalian = jumlahPembayaranTunai - totalPembayaran;
+        if (totalPembayaran >= jumlahPembayaranTunai) {
+            double kembalian = totalPembayaran - jumlahPembayaranTunai;
             System.out.println("Pembayaran tunai berhasil.");
             System.out.println("Kembalian : " + kembalian);
             totalPembayaran = 0;
@@ -996,58 +997,6 @@ public class debian {
             System.out.println("JUmlah pembayaran tidak mencukupi. Masukkan ulang jumlah pembayaran yang cukup.");
         }
     }
-
-    static void pembayaranKartuKredit() {
-        System.out.print("Masukkan nomor kartu kredit: ");
-        String nomorKartu = input.nextLine();
-
-        System.out.print("Masukkan tanggal kadaluwarsa (MM/YY): ");
-        String tanggalKadaluwarsa = input.nextLine();
-
-        System.out.print("Masukkan CVV: ");
-        int cvv = input.nextInt();
-        input.nextLine();
-
-        if (isValidKartuKredit(nomorKartu, tanggalKadaluwarsa, cvv)) {
-            System.out.println("Selamat pembayaran kartu kredit berhasil!");
-            totalPembayaran = 0;
-        } else {
-            System.out.println(
-                    "Informasi kartu kredit tidak valid. Pembayaran gagal. Mohon ulangi kembali dengan benar.");
-        }
-    }
-
-    static boolean isValidKartuKredit(String nomorKartu, String tanggalKadaluwarsa, int cvv) {
-        return isValidLuhn(nomorKartu) && isValidTanggalKadaluwarsa(tanggalKadaluwarsa) && cvv >= 100 && cvv <= 999;
-    }
-
-    static boolean isValidLuhn(String nomorKartu) {
-        int nDigits = nomorKartu.length();
-        int nSum = 0;
-        boolean isSecond = false;
-
-        for (int i = nDigits - 1; i >= 0; i--) {
-            int d = nomorKartu.charAt(i) - '0';
-
-            if (isSecond)
-                d *= 2;
-
-            nSum += d / 10 + d % 10;
-
-            isSecond = !isSecond;
-        }
-
-        return (nSum % 10 == 0);
-    }
-
-    static boolean isValidTanggalKadaluwarsa(String tanggal) {
-        return tanggal.compareTo(getCurrentDate()) > 0;
-    }
-
-    static String getCurrentDate() {
-        return "23/24";
-    }
-
     public static void main(String[] args) {
         while (true) {
             menuUtama();

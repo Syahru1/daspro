@@ -19,7 +19,7 @@ public class Quiz1 {
 
             System.out.print("Apakah Anda ingin mengulang permainan (Y/y)? ");
             menu = input.nextLine().charAt(0);
-        } while (menu == 'Y' || menu == 'y');
+        } while (menu == 'Y' || menu == 'Y');
 
         System.out.println("Terima kasih telah bermain!");
     }

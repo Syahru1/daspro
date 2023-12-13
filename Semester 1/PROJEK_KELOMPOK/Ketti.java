@@ -2,172 +2,172 @@ import java.util.Scanner;
 
 public class Ketti {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("==================================");
+            System.out.println("||    SELAMAT DATANG DI KETTI   ||");
+            System.out.println("==================================");
+            System.out.print("Masukkan nama Anda (sesuai KTP): ");
+            String name = input.nextLine();
 
-        System.out.println("SELAMAT DATANG DI KETTI");
-        System.out.print("Masukkan nama Anda: ");
-        String name = input.nextLine();
+            if (charChecker(name)) {
+                System.out.println("Error: Nama tidak boleh memuat angka!");
+            } else {
+                System.out.println("Hai " + name + ", senang berjumpa denganmu!");
 
-        if (charChecker(name)) {
-            System.out.println("Error: Nama tidak boleh memuat angka!");
-        } else if (name.length() > 20) {
-            System.out.println("Error: Nama tidak boleh melebihi dari 20 karakter!");
-        } else {
-            System.out.println("Hai " + name + ", senang berjumpa denganmu!");
+                System.out.println("\nDaftar transportasi yang tersedia:");
+                System.out.println("1. Kereta Api");
+                System.out.println("2. Bus");
+                System.out.println("3. Pesawat Terbang");
+                System.out.println("4. Kapal Laut");
 
-            System.out.println("\nDaftar transportasi yang tersedia:");
-            System.out.println("1. Kereta Api");
-            System.out.println("2. Bus");
-            System.out.println("3. Pesawat Terbang");
-            System.out.println("4. Kapal Laut");
+                System.out.print("Pilih transportasi (tulis dalam angka): ");
+                byte chooseTransport = input.nextByte();
 
-            System.out.print("Pilih transportasi (tulis dalam angka): ");
-            byte chooseTransport = input.nextByte();
+                if (chooseTransport > 0 && chooseTransport < 5) {
+                    System.out.println("Anda memilih transportasi berupa " + transportName(chooseTransport));
 
-            if (chooseTransport > 0 && chooseTransport < 5) {
-                System.out.println("Anda memilih transportasi berupa " + transportName(chooseTransport));
+                    if (chooseTransport == 1) {
+                        System.out.println("\nDaftar kota yang tersedia:");
+                        System.out.println("1. Jakarta");
+                        System.out.println("2. Bandung");
+                        System.out.println("3. Cirebon");
+                        System.out.println("4. Purwokerto");
+                        System.out.println("5. Semarang");
+                        System.out.println("6. Jogjakarta");
+                        System.out.println("7. Solo");
+                        System.out.println("8. Madiun");
+                        System.out.println("9. Surabaya");
+                        System.out.println("10. Malang");
+                        System.out.println("11. Jember");
+                        System.out.println("12. Ketapang");
 
-                if (chooseTransport == 1) {
-                    System.out.println("\nDaftar kota yang tersedia:");
-                    System.out.println("1. Jakarta");
-                    System.out.println("2. Bandung");
-                    System.out.println("3. Cirebon");
-                    System.out.println("4. Purwokerto");
-                    System.out.println("5. Semarang");
-                    System.out.println("6. Jogjakarta");
-                    System.out.println("7. Solo");
-                    System.out.println("8. Madiun");
-                    System.out.println("9. Surabaya");
-                    System.out.println("10. Malang");
-                    System.out.println("11. Jember");
-                    System.out.println("12. Ketapang");
+                        System.out.print("Pilih kota keberangkatan Anda: ");
+                        byte chooseDepartureTrain = input.nextByte();
 
-                    System.out.print("Pilih kota keberangkatan Anda: ");
-                    byte chooseDepartureTrain = input.nextByte();
+                        if (chooseDepartureTrain > 0 && chooseDepartureTrain < 13) {
+                            System.out.println("Anda memilih kota keberangkatan Anda yaitu Kota " + departureTrainName(chooseDepartureTrain));
+                            System.out.print("Pilih kota tujuan Anda: ");
+                            byte chooseDestinationTrain = input.nextByte();
+                            
+                            if (chooseDestinationTrain == chooseDepartureTrain) {
+                                System.out.println("Error: Anda memasukkan kota tujuan yang sama dengan kota keberangkatan!");
+                            } else if (chooseDestinationTrain > 12) {
+                                System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
+                            } else {
+                                System.out.print("Anda memilih kota tujuan Anda yaitu Kota " + destinationTrainName(chooseDestinationTrain));
+                            }
 
-                    if (chooseDepartureTrain > 0 && chooseDepartureTrain < 13) {
-                        System.out.println("Anda memilih kota keberangkatan Anda yaitu Kota " + departureTrainName(chooseDepartureTrain));
-                        System.out.print("Pilih kota tujuan Anda: ");
-                        byte chooseDestinationTrain = input.nextByte();
-                        
-                        if (chooseDestinationTrain == chooseDepartureTrain) {
-                            System.out.println("Error: Anda memasukkan kota tujuan yang sama dengan kota keberangkatan!");
-                        } else if (chooseDestinationTrain > 12) {
-                            System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
                         } else {
-                            System.out.print("Anda memilih kota tujuan Anda yaitu Kota " + destinationTrainName(chooseDestinationTrain));
+                            System.out.println("Error: Harap masukkan angka 1 hingga 12!");
                         }
-
-                    } else {
-                        System.out.println("Error: Harap masukkan angka 1 hingga 12!");
                     }
-                }
 
-                else if (chooseTransport == 2) {
-                    System.out.println("\nDaftar kota yang tersedia:");
-                    System.out.println("1. Jakarta");
-                    System.out.println("2. Bandung");
-                    System.out.println("3. Medan");
-                    System.out.println("4. Denpasar");
-                    System.out.println("5. Semarang");
-                    System.out.println("6. Jogjakarta");
-                    System.out.println("7. Solo");
-                    System.out.println("8. Palembang");
-                    System.out.println("9. Surabaya");
-                    System.out.println("10. Malang");
-                    System.out.println("11. Jember");
-                    System.out.println("12. Padang");
+                    else if (chooseTransport == 2) {
+                        System.out.println("\nDaftar kota yang tersedia:");
+                        System.out.println("1. Jakarta");
+                        System.out.println("2. Bandung");
+                        System.out.println("3. Medan");
+                        System.out.println("4. Denpasar");
+                        System.out.println("5. Semarang");
+                        System.out.println("6. Jogjakarta");
+                        System.out.println("7. Solo");
+                        System.out.println("8. Palembang");
+                        System.out.println("9. Surabaya");
+                        System.out.println("10. Malang");
+                        System.out.println("11. Jember");
+                        System.out.println("12. Padang");
 
-                    System.out.print("Pilih kota keberangkatan Anda: ");
-                    byte chooseDepartureBus = input.nextByte();
+                        System.out.print("Pilih kota keberangkatan Anda: ");
+                        byte chooseDepartureBus = input.nextByte();
 
-                    if (chooseDepartureBus > 0 && chooseDepartureBus < 13) {
-                        System.out.println("Anda memilih kota keberangkatan Anda yaitu Kota " + departureBusName(chooseDepartureBus));
-                        System.out.print("Pilih kota tujuan Anda: ");
-                        byte chooseDestinationBus = input.nextByte();
+                        if (chooseDepartureBus > 0 && chooseDepartureBus < 13) {
+                            System.out.println("Anda memilih kota keberangkatan Anda yaitu Kota " + departureBusName(chooseDepartureBus));
+                            System.out.print("Pilih kota tujuan Anda: ");
+                            byte chooseDestinationBus = input.nextByte();
 
-                        if (chooseDestinationBus == chooseDepartureBus) {
-                            System.out.println("Error: Anda memasukkan kota tujuan yang sama dengan kota keberangkatan!");
-                        } else if (chooseDestinationBus > 12) {
-                            System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
+                            if (chooseDestinationBus == chooseDepartureBus) {
+                                System.out.println("Error: Anda memasukkan kota tujuan yang sama dengan kota keberangkatan!");
+                            } else if (chooseDestinationBus > 12) {
+                                System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
+                            } else {
+                                System.out.print("Anda memilih kota tujuan Anda yaitu Kota " + destinationTrainName(chooseDestinationBus));
+                            }
+
                         } else {
-                            System.out.print("Anda memilih kota tujuan Anda yaitu Kota " + destinationTrainName(chooseDestinationBus));
+                            System.out.println("Error: Harap masukkan angka 1 hingga 12!");
                         }
-
-                    } else {
-                        System.out.println("Error: Harap masukkan angka 1 hingga 12!");
                     }
-                }
 
-                else if (chooseTransport == 3) {
-                    System.out.println("\nDaftar kota keberangkatan yang tersedia:");
-                    System.out.println("1. Jakarta");
-                    System.out.println("2. Kertapati");
-                    System.out.println("3. Medan");
-                    System.out.println("4. Denpasar");
-                    System.out.println("5. Lombok");
-                    System.out.println("6. Jogjakarta");
-                    System.out.println("7. Jayapura");
-                    System.out.println("8. Palembang");
+                    else if (chooseTransport == 3) {
+                        System.out.println("\nDaftar kota keberangkatan yang tersedia:");
+                        System.out.println("1. Jakarta");
+                        System.out.println("2. Kertapati");
+                        System.out.println("3. Medan");
+                        System.out.println("4. Denpasar");
+                        System.out.println("5. Lombok");
+                        System.out.println("6. Jogjakarta");
+                        System.out.println("7. Jayapura");
+                        System.out.println("8. Palembang");
 
-                    System.out.print("Pilih kota keberangkatan Anda: ");
-                    byte chooseDepartureAirplane = input.nextByte();
+                        System.out.print("Pilih kota keberangkatan Anda: ");
+                        byte chooseDepartureAirplane = input.nextByte();
 
-                    if (chooseDepartureAirplane > 0 && chooseDepartureAirplane < 9) {
-                        System.out.println("Anda memilih kota keberangkatan Anda yaitu Kota " + departureAirplaneName(chooseDepartureAirplane));
-                        System.out.print("Pilih kota tujuan Anda: ");
-                        byte chooseDestinationAirplane = input.nextByte();
+                        if (chooseDepartureAirplane > 0 && chooseDepartureAirplane < 9) {
+                            System.out.println("Anda memilih kota keberangkatan Anda yaitu Kota " + departureAirplaneName(chooseDepartureAirplane));
+                            System.out.print("Pilih kota tujuan Anda: ");
+                            byte chooseDestinationAirplane = input.nextByte();
 
-                        if (chooseDestinationAirplane == chooseDepartureAirplane) {
-                            System.out.println("Error: Anda memasukkan kota tujuan yang sama dengan kota keberangkatan!");
-                        } else if (chooseDestinationAirplane > 12) {
-                            System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
+                            if (chooseDestinationAirplane == chooseDepartureAirplane) {
+                                System.out.println("Error: Anda memasukkan kota tujuan yang sama dengan kota keberangkatan!");
+                            } else if (chooseDestinationAirplane > 12) {
+                                System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
+                            } else {
+                                System.out.print("Anda memilih kota tujuan Anda yaitu Kota " + destinationAirplaneName(chooseDestinationAirplane));
+                            }
+
                         } else {
-                            System.out.print("Anda memilih kota tujuan Anda yaitu Kota " + destinationAirplaneName(chooseDestinationAirplane));
-                        }
+                            System.out.println("Error: Harap masukkan angka 1 hingga 8!");
+                        }  
+                    }
+                    
+                    else if (chooseTransport == 4) {
+                        System.out.println("\nDaftar pelabuhan yang tersedia:");
+                        System.out.println("1. Tanjung Priok");
+                        System.out.println("2. Merak");
+                        System.out.println("3. Harbour Bay");
+                        System.out.println("4. Kandidi Reo");
+                        System.out.println("5. Merauke");
+                        System.out.println("6. Tanjung Perak");
+                        System.out.println("7. Bakauheni");
+                        System.out.println("8. Soekarno-Hatta");
+
+                        System.out.print("Pilih pelabuhan keberangkatan Anda: ");
+                        byte chooseDepartureShip = input.nextByte();
+
+                        if (chooseDepartureShip > 0 && chooseDepartureShip < 9) {
+                            System.out.println("Anda memilih pelabuhan keberangkatan Anda yaitu Pelabuhan " + departureShipName(chooseDepartureShip));
+                            System.out.print("Pilih pelabuhan tujuan Anda: ");
+                            byte chooseDestinationShip = input.nextByte();
+
+                            if (chooseDestinationShip == chooseDepartureShip) {
+                                System.out.println("Error: Anda memasukkan pelabuhan tujuan yang sama dengan pelabuhan keberangkatan!");
+                            } else if (chooseDestinationShip > 12) {
+                                System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
+                            } else {
+                                System.out.print("Anda memilih pelabuhan tujuan Anda yaitu Pelabuhan " + destinationShipName(chooseDestinationShip));
+                            }
+
+                        } else {
+                            System.out.println("Error: Harap masukkan angka 1 hingga 8!");
+                        }  
 
                     } else {
-                        System.out.println("Error: Harap masukkan angka 1 hingga 8!");
-                    }  
-                }
-                
-                else if (chooseTransport == 4) {
-                    System.out.println("\nDaftar pelabuhan yang tersedia:");
-                    System.out.println("1. Tanjung Priok");
-                    System.out.println("2. Merak");
-                    System.out.println("3. Harbour Bay");
-                    System.out.println("4. Kandidi Reo");
-                    System.out.println("5. Merauke");
-                    System.out.println("6. Tanjung Perak");
-                    System.out.println("7. Bakauheni");
-                    System.out.println("8. Soekarno-Hatta");
-
-                    System.out.print("Pilih pelabuhan keberangkatan Anda: ");
-                    byte chooseDepartureShip = input.nextByte();
-
-                    if (chooseDepartureShip > 0 && chooseDepartureShip < 9) {
-                        System.out.println("Anda memilih pelabuhan keberangkatan Anda yaitu Pelabuhan " + departureShipName(chooseDepartureShip));
-                        System.out.print("Pilih pelabuhan tujuan Anda: ");
-                        byte chooseDestinationShip = input.nextByte();
-
-                        if (chooseDestinationShip == chooseDepartureShip) {
-                            System.out.println("Error: Anda memasukkan pelabuhan tujuan yang sama dengan pelabuhan keberangkatan!");
-                        } else if (chooseDestinationShip > 12) {
-                            System.out.println("Error: Harap Anda masukkan angka dari 1 sampai 12!");
-                        } else {
-                            System.out.print("Anda memilih pelabuhan tujuan Anda yaitu Pelabuhan " + destinationShipName(chooseDestinationShip));
-                        }
-
-                    } else {
-                        System.out.println("Error: Harap masukkan angka 1 hingga 8!");
-                    }  
+                        return;
+                    }
 
                 } else {
-                    return;
+                    System.out.println("Error: Harap masukkan angka dari 1 hingga 4!");
                 }
-
-            } else {
-                System.out.println("Error: Harap masukkan angka dari 1 hingga 4!");
             }
         }
     }
