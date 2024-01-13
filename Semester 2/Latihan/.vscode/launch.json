@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "kasir2",
+            "request": "launch",
+            "mainClass": "kasir2",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "kasir2",
+            "request": "launch",
+            "mainClass": "projek.kasir2",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Nestedloop2_2341720002",
+            "request": "launch",
+            "mainClass": "Nestedloop2_2341720002",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Array",
+            "request": "launch",
+            "mainClass": "Array",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Gaji",
+            "request": "launch",
+            "mainClass": "Gaji",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "HargaBayar",
+            "request": "launch",
+            "mainClass": "HargaBayar",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "LatihanSyahrul",
+            "request": "launch",
+            "mainClass": "LatihanSyahrul",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Lingkaran",
+            "request": "launch",
+            "mainClass": "Lingkaran",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Login",
+            "request": "launch",
+            "mainClass": "Login",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Musik",
+            "request": "launch",
+            "mainClass": "Musik",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Musik2",
+            "request": "launch",
+            "mainClass": "Musik2",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "Quiz",
+            "request": "launch",
+            "mainClass": "Quiz",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "WriMethod",
+            "request": "launch",
+            "mainClass": "WriMethod",
+            "projectName": "Latihan_6b2e5d76"
+        },
+        {
+            "type": "java",
+            "name": "flightNumber",
+            "request": "launch",
+            "mainClass": "flightNumber",
+            "projectName": "Latihan_6b2e5d76"
+        }
+    ]
+}
